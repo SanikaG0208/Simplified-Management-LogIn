@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { createRoot } from "react-dom/client";
+import { Button, Checkbox, ConfigProvider, Form, Input } from "antd";
+import "antd/dist/reset.css";
 import "./styles.css";
 import logo from "./logo.png";
 
@@ -8,11 +10,11 @@ function PropertyMark() {
 }
 
 function LoginPage() {
-  const [visible, setVisible] = useState(false);
+
   const [message, setMessage] = useState("");
   const [recovery, setRecovery] = useState(false);
-  function submit(event) {
-    event.preventDefault();
+  function submit() {
+
     setMessage(recovery ? "Password recovery is ready to connect to your authentication service. No email was sent." : "The login preview works. Connect your authentication service to sign in.");
   }
   function switchMode() { setRecovery(!recovery); setMessage(""); }
@@ -24,18 +26,20 @@ function LoginPage() {
           <p className="eyebrow">A little less admin. A little more possibility.</p>
           <div className="welcome-heading"><h1 id="login-title">{recovery ? "Let’s get you back in." : "Property management, simplified."}</h1></div>
           <p className="intro">{recovery ? "Enter the email you use for your workspace." : "A clearer start to your property day."}</p>
-          <form onSubmit={submit}>
-            <label htmlFor="email">Email address</label>
-            <input id="email" name="email" type="email" autoComplete="username" placeholder="you@company.com" required onChange={() => setMessage("")} />
+          <Form layout="vertical" onFinish={submit} onValuesChange={() => setMessage("")} requiredMark={false}>
+            <Form.Item label="Email address" name="email" rules={[{ required: true, message: "Enter your email address." }, { type: "email", message: "Enter a valid email address." }]}>
+              <Input type="email" autoComplete="username" placeholder="you@company.com" />
+            </Form.Item>
             {!recovery && <>
-              <div className="label-row"><label htmlFor="password">Password</label><button type="button" className="text-button" onClick={switchMode}>Forgot password?</button></div>
-              <div className="password-field"><input id="password" name="password" type={visible ? "text" : "password"} autoComplete="current-password" placeholder="Enter your password" required onChange={() => setMessage("")} /><button className="visibility" type="button" aria-label={visible ? "Hide password" : "Show password"} aria-pressed={visible} onClick={() => setVisible(!visible)}><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M2 12s3.5-6 10-6 10 6 10 6-3.5 6-10 6S2 12 2 12Z" stroke="currentColor" strokeWidth="1.5"/><circle cx="12" cy="12" r="3" stroke="currentColor" strokeWidth="1.5"/>{visible && <path d="m3 3 18 18" stroke="currentColor" strokeWidth="1.5"/>}</svg></button></div>
-              <label className="remember"><input type="checkbox" name="remember" />Keep me signed in</label>
+              <Form.Item label={<div className="password-label"><span>Password</span><Button type="link" className="forgot-button" onClick={switchMode}>Forgot password?</Button></div>} name="password" rules={[{ required: true, message: "Enter your password." }]}>
+                <Input.Password autoComplete="current-password" placeholder="Enter your password" />
+              </Form.Item>
+              <Form.Item name="remember" valuePropName="checked" className="remember-item"><Checkbox>Keep me signed in</Checkbox></Form.Item>
             </>}
-            <button type="submit" className="submit">{recovery ? "Send reset link" : "Sign in to your workspace"}<span aria-hidden="true">→</span></button>
+            <Button type="primary" htmlType="submit" block>{recovery ? "Send reset link" : "Sign in to your workspace"}<span aria-hidden="true">→</span></Button>
             {message && <p className="notice" role="status">{message}</p>}
-            {recovery && <button type="button" className="back text-button" onClick={switchMode}>← Back to sign in</button>}
-          </form>
+            {recovery && <Button type="link" className="back" onClick={switchMode}>← Back to sign in</Button>}
+          </Form>
           <div className="workspace-note"><span className="status-dot" />One place for every property.</div>
           <p className="support">Need a hand? <a href="mailto:support@simplifiedmanagement.in">Contact your support team</a></p>
         </section>
@@ -67,6 +71,7 @@ function LoginPage() {
   );
 }
 
-createRoot(document.getElementById("root")).render(<React.StrictMode><LoginPage /></React.StrictMode>);
+createRoot(document.getElementById("root")).render(<React.StrictMode><ConfigProvider theme={{ token: { colorPrimary: "#376fb3", colorText: "#29312f", colorTextPlaceholder: "#a0a39c", colorBorder: "#dedfd9", colorBgContainer: "#fffefa", borderRadius: 11, controlHeight: 49, fontFamily: "Inter, system-ui, sans-serif", fontSize: 13 }, components: { Button: { primaryShadow: "none" } } }}><LoginPage /></ConfigProvider></React.StrictMode>);
+
 
 

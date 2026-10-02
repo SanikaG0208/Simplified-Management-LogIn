@@ -6,6 +6,12 @@
     "dev": "vite --configLoader native --host 127.0.0.1 --port 4180",
     "build": "vite build --configLoader native"
   },
-  "dependencies": { "react": "^19.0.0", "react-dom": "^19.0.0" },
-  "devDependencies": { "vite": "^6.0.0" }
+  "dependencies": {
+    "antd": "^6.6.5",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "vite": "^6.0.0"
+  }
 }

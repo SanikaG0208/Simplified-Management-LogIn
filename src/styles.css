@@ -12,7 +12,7 @@ button { cursor: pointer; }
 .brand-secondary { font-weight: 400; }
 .brand-logo { display: block; width: 270px; max-width: 100%; height: auto; }
 .brand-mark { width: 29px; height: 29px; }
-svg { display: block; width: 100%; height: 100%; }
+.property-art { display: block; }
 .header-note { color: #8c908b; font-size: 12px; }
 main { flex: 1; display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 70px; width: min(1180px, 100%); margin: 0 auto; padding: 22px 48px 38px; }
 .login { width: 100%; max-width: 390px; justify-self: center; text-align: left; }
@@ -24,24 +24,6 @@ main { flex: 1; display: grid; grid-template-columns: 1fr 1fr; align-items: cent
 .eyebrow { font-size: 11px; color: #838780; margin: 0 0 13px; letter-spacing: .15px; }
 h1 { font-family: "Plus Jakarta Sans", Inter, system-ui, sans-serif; font-weight: 500; font-size: 43px; letter-spacing: -1.7px; line-height: 1.2; margin: 0 0 14px; }
 .intro { font-size: 13px; color: #737974; line-height: 1.7; margin: 0 0 36px; }
-form { text-align: left; }
-label { display: block; font-size: 12px; font-weight: 500; margin-bottom: 9px; }
-input:not([type="checkbox"]) { width: 100%; height: 49px; border: 1px solid #dedfd9; border-radius: 11px; background: #fffefa; color: #29312f; padding: 0 15px; font-size: 13px; transition: border-color .2s, box-shadow .2s; }
-input::placeholder { color: #a0a39c; }
-input:focus { outline: none; border-color: #376fb3; box-shadow: 0 0 0 3px #376fb312; }
-.label-row { display: flex; justify-content: space-between; align-items: baseline; margin-top: 23px; }
-.text-button { border: 0; background: none; padding: 0; color: #456b98; font-size: 11px; }
-.text-button:hover, a:hover { color: #2c5687; text-decoration: underline; }
-.password-field { position: relative; }
-.password-field input { padding-right: 48px; }
-.visibility { position: absolute; right: 6px; top: 6px; width: 37px; height: 37px; border-radius: 8px; border: 0; background: none; padding: 9px; color: #92998f; }
-.visibility:hover { color: #376fb3; }
-.remember { display: flex; align-items: center; gap: 8px; font-weight: 400; color: #7a7f76; font-size: 12px; margin: 18px 0 24px; cursor: pointer; }
-.remember input { margin: 0; width: 14px; height: 14px; accent-color: #376fb3; }
-.submit { width: 100%; min-height: 49px; display: flex; justify-content: center; align-items: center; gap: 15px; padding: 12px 16px; border: 1px solid #315f99; border-radius: 11px; background: #315f99; color: #fff; font-size: 13px; font-weight: 500; transition: background .2s, box-shadow .2s; }
-.submit:hover { background: #274f83; box-shadow: 0 4px 12px #315f9915; }
-.submit span { font-size: 18px; font-weight: 400; }
-form > input + .submit { margin-top: 24px; }
 .workspace-note { display: flex; justify-content: center; align-items: center; gap: 7px; font-size: 11px; color: #93978e; margin: 23px 0 32px; }
 .status-dot { width: 5px; height: 5px; border-radius: 50%; background: #6d91bb; }
 .support { padding-top: 24px; border-top: 1px solid #e6e7e0; margin: 0; font-size: 11px; color: #8b9087; }
@@ -69,3 +51,17 @@ footer { display: flex; justify-content: space-between; align-items: center; pad
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
 
 
+
+/* Ant Design owns the form controls; these rules handle layout and icon accents. */
+.login .ant-form-item { margin-bottom: 22px; }
+.login .ant-form-item-label > label { font-size: 12px; font-weight: 500; width: 100%; }
+.login .ant-form-item-label { width: 100%; }
+.password-label { width: 100%; display: flex; justify-content: space-between; align-items: center; }
+.login .forgot-button { height: auto; padding: 0; font-size: 11px; }
+.login .remember-item { margin-top: -4px; margin-bottom: 24px; }
+.login .ant-checkbox-wrapper { font-size: 12px; color: #737974; }
+.login .ant-btn-primary { font-weight: 500; gap: 14px; }
+.login .ant-input-password-icon { background: transparent; color: #92998f; }
+.login .ant-input-password-icon:hover { background: transparent; color: #376fb3; }
+.login .ant-input-password input { min-height: 0; }
+a:hover { text-decoration: underline; }
