@@ -1,0 +1,66 @@
+{
+  "verifiedOn": "2026-10-01",
+  "assets": [
+    {
+      "brand": "Airbnb",
+      "file": "airbnb.svg",
+      "url": "https://news.airbnb.com/images/belo.svg",
+      "source": "https://news.airbnb.com/",
+      "note": "Transparent official Bélo symbol used by newsroom header CSS; no wordmark. Official wordmark option airbnb-lockup.png from 2025 brand-assets ZIP has gradient background. Trademark guidelines require written permission; newsroom media editorial only.",
+      "alternateFile": "airbnb-lockup.png",
+      "alternateURL": "https://news-assets.withairbnb.com/wp-content/uploads/sites/21/2025/05/2025_airbnb_brand-assets.zip",
+      "guidelines": "https://www.airbnb.com/help/article/3233"
+    },
+    {
+      "brand": "Booking.com",
+      "file": "booking.svg",
+      "url": "https://content.presspage.com/templates/50/2962/744836/booking_logo--blue.svg?1",
+      "source": "https://news.booking.com/",
+      "note": "Official newsroom footer logo referenced by its booking settings JavaScript."
+    },
+    {
+      "brand": "Agoda",
+      "file": "agoda.svg",
+      "url": "https://cdn6.agoda.net/images/kite-js/logo/agoda/color-default.svg",
+      "source": "https://www.agoda.com/",
+      "note": "Official home page logo configuration and CDN; transparent SVG."
+    },
+    {
+      "brand": "Expedia",
+      "file": "expedia.png",
+      "url": "https://careers.expediagroup.com/wp-content/themes/careers.expediagroup.com/assets/build/img/home/brands/color/eg_careers_home_brands_01_expedia.png",
+      "source": "https://careers.expediagroup.com/",
+      "note": "Official color brand asset, 2641×532. Logo reuse through Travel Creator Program allowed after joining; brand marks remain trademarked.",
+      "guidelines": "https://help.creator.expediagroup.com/hc/en-us/articles/4405940422295-Can-I-use-any-Expedia-Group-logo-on-my-site-blog-or-social-media"
+    },
+    {
+      "brand": "Vrbo",
+      "file": "vrbo.png",
+      "url": "https://careers.expediagroup.com/wp-content/themes/careers.expediagroup.com/assets/build/img/home/brands/color/eg_careers_home_brands_03_vrbo.png",
+      "source": "https://careers.expediagroup.com/",
+      "note": "Official color brand asset, 7488×1823. Same Expedia Group reuse note."
+    },
+    {
+      "brand": "MakeMyTrip",
+      "file": "makemytrip.png",
+      "url": "https://promos.makemytrip.com/Growth/Images/1x/mmt_dt_top_icon.png",
+      "source": "https://www.makemytrip.com/",
+      "note": "Official home page image link, 1406×440."
+    },
+    {
+      "brand": "Goibibo",
+      "file": "goibibo.png",
+      "url": "https://go-assets.ibcdn.com/u/GI/images/1736403968363-header-sprite.png",
+      "source": "https://www.goibibo.com/info/terms-of-services/",
+      "note": "Exact unmodified rectangular extraction from official 250×400 header sprite. CSS logo size 104×30 at background-position -2px -1px with half-scale background; crop pixels x=4,y=2,width=208,height=60. Sprite retained as goibibo-sprite.png. Visually verified wordmark."
+    },
+    {
+      "brand": "StayVista",
+      "file": "stayvista.png",
+      "url": "https://img.vistarooms.com/website_assets/sv_logo_black.png",
+      "source": "https://www.stayvista.com/",
+      "note": "Official home page header logo, 160×73; display at 120×55 or smaller."
+    }
+  ],
+  "note": "URLs fetched successfully from official pages/CDNs. Source publication of an asset is not a general grant of logo reuse permission. No marks recreated."
+}

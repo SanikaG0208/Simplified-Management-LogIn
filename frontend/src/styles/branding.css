@@ -1,0 +1,205 @@
+.brand {
+  display: flex;
+  gap: 0;
+  letter-spacing: normal;
+  flex-shrink: 0;
+}
+.brand-full-logo {
+  display: block;
+  width: 250px;
+  height: auto;
+}
+.brand-short-logo {
+  display: none;
+  width: 43px;
+  height: 43px;
+}
+.brand--inverse {
+  background: transparent;
+  width: fit-content;
+}
+/* Logos retain their original transparent artwork without image framing. */
+#root .brand img,
+#root .channel-names img,
+#root .integration-logo img {
+  background: transparent;
+  border-radius: 0;
+  box-shadow: none;
+}
+.brand--inverse .brand-full-logo {
+  width: 250px;
+}
+.feature-tabs {
+  gap: 28px;
+}
+.feature-tabs button {
+  font-size: 14px;
+}
+.channel-names {
+  gap: 20px 32px;
+}
+.channel-names span {
+  font-size: 21px;
+}
+.pricing-section {
+  border-bottom: 1px solid var(--line);
+}
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: 38px;
+  border-top: 1px solid var(--line);
+}
+.pricing-grid article {
+  padding: 35px 32px;
+  border-right: 1px solid var(--line);
+}
+.pricing-grid article:first-child {
+  padding-left: 0;
+}
+.pricing-grid article:last-child {
+  border-right: 0;
+  padding-right: 0;
+}
+.pricing-range {
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  color: var(--blue);
+}
+.pricing-popular {
+  display: block;
+  width: fit-content;
+  margin-bottom: 15px;
+  padding: 5px 12px;
+  border-radius: 12px;
+  background: #e9f1fc;
+  color: var(--blue);
+  font-size: 11px;
+  font-weight: 600;
+}
+.pricing-grid h3 {
+  font-size: 28px;
+  margin: 12px 0 10px;
+}
+.pricing-grid article > p {
+  font-size: 14px;
+  color: var(--muted);
+}
+.pricing-quote {
+  font-size: 24px;
+  font-weight: 500;
+  color: var(--blue);
+  margin-top: 25px;
+}
+.pricing-quote span {
+  display: block;
+  font-size: 12px;
+  color: var(--muted);
+  font-weight: 400;
+  margin-top: 5px;
+}
+.pricing-grid ul {
+  list-style: none;
+  padding: 0;
+  margin: 25px 0;
+  min-height: 148px;
+}
+.pricing-grid li {
+  display: flex;
+  align-items: start;
+  gap: 8px;
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+.pricing-grid li svg {
+  margin-top: 3px;
+  color: #597c68;
+}
+.pricing-grid .button {
+  width: 100%;
+}
+.pricing-grid--two {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  border-top: 0;
+}
+.pricing-grid--two article,
+.pricing-grid--two article:first-child,
+.pricing-grid--two article:last-child {
+  padding: 32px;
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  background: #f8fbff;
+}
+.pricing-rates { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 28px; }
+.pricing-rates p { font-size: 13px; color: var(--muted); margin-bottom: 6px; }
+.pricing-rates strong { display: block; font-size: 36px; line-height: 1.3; color: var(--blue); }
+.pricing-rates span { font-size: 13px; color: var(--muted); }
+.pricing-notes { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px 30px; margin-top: 28px; }
+.pricing-notes p { display: flex; align-items: center; gap: 8px; margin: 0; font-size: 13px; color: var(--muted); }
+.pricing-notes svg { color: var(--blue); }
+@media (max-width: 780px) { .pricing-grid--two { grid-template-columns: 1fr; } }
+@media (max-width: 400px) { .pricing-rates { grid-template-columns: 1fr; } }
+@media (max-width: 1150px) {
+  .brand-full-logo {
+    width: 215px;
+  }
+  .navigation {
+    gap: 13px;
+    font-size: 13px;
+  }
+  .header-login {
+    padding-left: 13px;
+  }
+  .header-inner {
+    gap: 15px;
+  }
+}
+@media (max-width: 780px) {
+  .feature-tabs {
+    gap: 18px;
+    flex-wrap: wrap;
+  }
+  .pricing-grid {
+    grid-template-columns: 1fr;
+  }
+  .pricing-grid article,
+  .pricing-grid article:first-child,
+  .pricing-grid article:last-child {
+    padding: 28px 0;
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .pricing-grid article:last-child {
+    border-bottom: 0;
+  }
+  .pricing-grid ul {
+    min-height: 0;
+  }
+  .pricing-grid .button {
+    width: auto;
+  }
+  .brand-full-logo {
+    width: 260px;
+  }
+}
+@media (max-width: 540px) {
+  .site-header .brand-full-logo {
+    display: none;
+  }
+  .site-header .brand-short-logo {
+    display: block;
+  }
+  .brand--inverse .brand-full-logo {
+    width: 235px;
+  }
+  .feature-tabs {
+    gap: 0;
+  }
+  .brand--inverse {
+    padding: 12px;
+  }
+  .pricing-grid h3 {
+    font-size: 26px;
+  }
+}

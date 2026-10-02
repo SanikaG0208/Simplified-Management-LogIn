@@ -1,0 +1,227 @@
+:root {
+  --ink: #182c43;
+  --blue: #153e75;
+  --blue-hover: #225b9b;
+  --muted: #647386;
+  --line: #e0e7ee;
+  --pale: #f2f6fb;
+  --peach: #eea862;
+  --radius-control: 12px;
+  --radius-image: 16px;
+  --shadow-image: 0 8px 24px rgb(24 44 67 / 12%),
+    0 2px 6px rgb(24 44 67 / 6%);
+  font-family: "DM Sans", sans-serif;
+  color: var(--ink);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
+body {
+  margin: 0;
+  background: #fff;
+  font-size: 16px;
+  line-height: 1.7;
+}
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+button,
+a,
+input,
+select,
+textarea {
+  -webkit-tap-highlight-color: transparent;
+}
+button {
+  cursor: pointer;
+  border-radius: var(--radius-control);
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+img {
+  display: block;
+  max-width: 100%;
+  border-radius: var(--radius-image);
+}
+svg {
+  flex-shrink: 0;
+}
+button:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+:focus-visible {
+  outline: 3px solid #e69443;
+  outline-offset: 5px;
+}
+::selection {
+  background: #e0eafb;
+}
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+h1,
+h2,
+h3 {
+  font-family: "Manrope", sans-serif;
+}
+h1 {
+  font-size: clamp(48px, 5.6vw, 78px);
+  line-height: 1.08;
+  font-weight: 500;
+  letter-spacing: -3.8px;
+  margin-bottom: 26px;
+}
+h2 {
+  font-size: clamp(32px, 3.4vw, 46px);
+  font-weight: 500;
+  line-height: 1.22;
+  letter-spacing: -1.8px;
+  margin-bottom: 24px;
+}
+h3 {
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: -0.6px;
+}
+.container {
+  width: min(1240px, 90%);
+  margin-inline: auto;
+}
+.section {
+  padding-block: 95px;
+}
+.eyebrow {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.8px;
+  line-height: 1.7;
+  margin-bottom: 23px;
+  color: var(--blue);
+}
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 49px;
+  padding: 13px 25px;
+  border: 1px solid var(--blue);
+  border-radius: var(--radius-control);
+  color: #fff;
+  background: var(--blue);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.5;
+  transition: background 0.2s;
+}
+.button:hover {
+  background: var(--blue-hover);
+}
+.button--small {
+  padding: 10px 21px;
+  min-height: 44px;
+}
+.quiet-link {
+  color: var(--blue);
+  font-size: 14px;
+  font-weight: 600;
+  border-bottom: 1px solid #94abc5;
+  padding-bottom: 4px;
+}
+.quiet-link:hover {
+  border-color: var(--blue);
+}
+.skip-link {
+  position: absolute;
+  z-index: 100;
+  top: -100px;
+  left: 20px;
+  padding: 12px 20px;
+  background: var(--blue);
+  color: #fff;
+}
+.skip-link:focus {
+  top: 10px;
+}
+/* Keep all four corners consistent across component and mobile styles. */
+#root button,
+#root .button,
+#root .ai-pill {
+  border-radius: var(--radius-control);
+}
+#root img {
+  border-radius: var(--radius-image);
+  box-shadow: var(--shadow-image);
+}
+#root .product-screenshot,
+#root .feature-screenshot,
+#root .page-intro-image,
+#root .screenshot-dialog {
+  border-radius: var(--radius-image);
+}
+#root .feature-tabs {
+  border-radius: var(--radius-control);
+}
+/* Place shadows outside image frames so their overflow cannot clip them. */
+#root .product-screenshot,
+#root .feature-screenshot,
+#root .page-intro-image,
+#root .phone-mockup--actual {
+  box-shadow: var(--shadow-image);
+}
+#root .product-screenshot img,
+#root .feature-screenshot img,
+#root .page-intro-image img,
+#root .phone-mockup--actual img {
+  box-shadow: none;
+}
+@media (max-width: 700px) {
+  .container {
+    width: 88%;
+  }
+  .section {
+    padding-block: 60px;
+  }
+  h1 {
+    font-size: clamp(44px, 11.5vw, 65px);
+    letter-spacing: -2.5px;
+  }
+  h2 {
+    font-size: 33px;
+    letter-spacing: -1.2px;
+  }
+  h3 {
+    font-size: 21px;
+  }
+  .eyebrow {
+    font-size: 10px;
+    letter-spacing: 1.5px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+    animation: none !important;
+  }
+}

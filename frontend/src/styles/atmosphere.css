@@ -1,0 +1,111 @@
+.section-atmosphere {
+  position: relative;
+  isolation: isolate;
+  background: linear-gradient(145deg, #f8fbff, #fff 55%, #fffaf4);
+}
+.section-atmosphere--peach {
+  background: linear-gradient(135deg, #fffaf4, #fff 60%, #f2f7fd);
+}
+.section-atmosphere > section {
+  position: relative;
+  z-index: 1;
+}
+.atmosphere-art {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  user-select: none;
+  z-index: 0;
+}
+.atmosphere-glow {
+  position: absolute;
+  width: min(480px, 65vw);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  animation: atmosphere-drift 18s ease-in-out infinite alternate;
+}
+.atmosphere-glow--blue {
+  top: -140px;
+  right: -100px;
+  background: radial-gradient(circle, #dceafb99, #dceafb00 70%);
+}
+.atmosphere-glow--peach {
+  bottom: -150px;
+  left: -120px;
+  background: radial-gradient(circle, #f7dfc799, #f7dfc700 70%);
+  animation-delay: -9s;
+}
+.atmosphere-orbit {
+  position: absolute;
+  top: 35px;
+  right: 2%;
+  width: 220px;
+  height: 190px;
+  border: 1px dashed rgb(21 62 117 / 9%);
+  border-radius: 50%;
+  transform: rotate(-12deg);
+}
+.atmosphere-icon {
+  position: absolute;
+  display: grid;
+  place-items: center;
+  color: rgb(21 62 117 / 14%);
+  background: rgb(255 255 255 / 45%);
+  border: 1px solid rgb(21 62 117 / 7%);
+  border-radius: 20px;
+  animation: atmosphere-float 8s ease-in-out infinite;
+}
+.atmosphere-icon--property {
+  width: 82px;
+  height: 82px;
+  top: 45px;
+  left: 60px;
+}
+.atmosphere-icon--calendar {
+  width: 58px;
+  height: 58px;
+  top: -5px;
+  right: 0;
+  animation-delay: -3s;
+}
+.atmosphere-icon--link {
+  width: 50px;
+  height: 50px;
+  bottom: 0;
+  left: 5px;
+  color: rgb(189 120 58 / 20%);
+  animation-delay: -5s;
+}
+.atmosphere-dot {
+  position: absolute;
+  right: 15px;
+  bottom: 15px;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #eea86266;
+}
+.section-atmosphere--peach .atmosphere-orbit {
+  right: auto;
+  left: 1%;
+  top: auto;
+  bottom: 35px;
+}
+@keyframes atmosphere-float {
+  0%, 100% { transform: translateY(0) rotate(12deg); }
+  50% { transform: translateY(-12px) rotate(16deg); }
+}
+@keyframes atmosphere-drift {
+  from { transform: translate(0, 0); }
+  to { transform: translate(30px, 25px); }
+}
+@media (max-width: 700px) {
+  .atmosphere-orbit { opacity: 0.45; right: -85px; }
+  .section-atmosphere--peach .atmosphere-orbit { left: -85px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .atmosphere-glow,
+  .atmosphere-icon { animation: none; }
+  .atmosphere-icon { transform: rotate(12deg); }
+}

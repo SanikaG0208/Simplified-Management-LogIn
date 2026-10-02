@@ -1,0 +1,145 @@
+export const productRoutes = {
+  "/services/property-management-software": "properties",
+  "/services/channel-manager": "channels",
+  "/services/calendar-sync": "calendar",
+  "/services/partner-payouts": "partners",
+};
+
+export const informationPages = {
+  "/about": {
+    label: "About", title: "More time for the stay. Less time on the admin.",
+    description: "Simplified Management brings the work behind hospitality into one connected view for growing property businesses.",
+    heading: "Built around the way your day works.",
+    introduction: "A reservation touches more than a calendar. It affects your guests, your team, your channels and your owners. Bringing those workflows together makes the next step easier to see.",
+    cards: [
+      ["building", "Your portfolio, together", "From villas and holiday homes to serviced apartments, follow the properties you manage from one overview."],
+      ["link", "Connected everyday work", "Keep bookings, availability and partner accounts connected instead of rebuilding the same information in separate tools."],
+      ["phone", "A personal starting point", "Talk through your current workflow with our team in Pune and explore a setup that fits your operation."],
+    ],
+  },
+  "/security": {
+    label: "Trust & Security", title: "Your data, protected",
+    description: "How Simplified Management is designed to protect your property, guest and payout data.",
+    heading: "Security built into how the platform works",
+    introduction: "A layered approach to how information travels, is stored, is accessed and is recovered.",
+    cards: [
+      ["lock", "Encryption in transit and at rest", "TLS secures platform connections, and stored data is designed to be encrypted."],
+      ["shield", "Access controls and roles", "Role-based permissions give owners, managers and staff appropriate access, keeping partner and financial information restricted."],
+      ["building", "Reliable uptime", "Established cloud infrastructure supports a platform designed for high availability."],
+      ["calendar", "Regular backups", "Regular platform backups and recovery processes are designed to limit data loss and downtime."],
+      ["check", "GDPR and India DPDP alignment", "The platform follows GDPR and India DPDP principles, with a way to raise personal data requests."],
+      ["shield", "Privacy by design", "Collecting only necessary service data and considering privacy throughout feature design."],
+    ],
+    note: "Discuss specific compliance, certification or data-residency requirements with the team to confirm the fit for your portfolio.",
+  },
+};
+
+export const legalPages = {
+  "/privacy": {
+    label: "Privacy", title: "Privacy Policy",
+    description: "This policy covers this website and the demo request form only.",
+    approved: true,
+    lastUpdated: "3 July 2026",
+    introduction: "This policy covers this website and the demo request form only. If you use the Simplified Management application as a hotel, guest, or staff member, see our",
+    sections: [
+      ["Who we are", 'This website is operated by Simplified Management ("Simplified Management", "we", "us"). We provide property management software and a channel manager for property operators. If you have questions about this policy, contact us at info@simplifiedmanagement.in.'],
+      ["Information we collect", ["We collect information you provide directly, such as when you submit a demo request or contact form. This may include your name, business name, email address, phone number, details about your property portfolio, and any message you send us.", "We may also collect limited technical information automatically, such as your IP address, browser type, and how you use the site, to keep the site secure and improve it."]],
+      ["How we use your information", "We use the information we collect to:", ["Respond to your demo requests, enquiries, and support messages;", "Schedule and deliver product demonstrations;", "Provide, maintain, and improve our website and services;", "Send you service-related communications you have requested;", "Comply with legal obligations and protect against misuse."]],
+      ["Legal basis", "Where applicable, we process personal data on the basis of your consent, our legitimate interest in operating and growing our business, and to take steps at your request before entering into a contract."],
+      ["Sharing your information", "We do not sell your personal data. We may share it with trusted service providers who help us operate the website and communicate with you (for example, hosting, analytics, and email providers), under obligations to protect it. We may also disclose information where required by law."],
+      ["Data retention", "We keep personal data only for as long as needed for the purposes described above, to comply with legal obligations, and to resolve disputes."],
+      ["Your rights", "Depending on your location, you may have rights to access, correct, delete, or restrict the use of your personal data, and to withdraw consent. We aim to handle personal data in line with the principles of the GDPR and India's Digital Personal Data Protection (DPDP) Act. To exercise any right, email us at info@simplifiedmanagement.in."],
+      ["Security", "We use reasonable technical and organizational measures designed to protect personal data. No method of transmission or storage is completely secure, but we work to keep your information safe."],
+      ["Changes to this policy", "We may update this policy from time to time. When we do, we will revise the date at the top of this page."],
+      ["Contact us", "Simplified Management\nViman Nagar, Pune, Maharashtra, India\ninfo@simplifiedmanagement.in"],
+    ],
+  },
+  "/app-privacy": {
+    label: "App Privacy", title: "Privacy for the work behind every stay.",
+    description: "A draft outline covering information used within the property management application.",
+    sections: [
+      ["Account and operational information", "The app's approved policy should cover account details, property records, reservations, guest information and partner accounts based on the application's actual data collection."],
+      ["Connected services and device permissions", "Document the data exchanged with booking channels and any device permissions requested by the mobile app. Include the purpose of each permission and how it can be managed."],
+      ["Access and responsibilities", "Clarify the responsibilities of the property operator and Simplified Management, including team access and the handling of guest information supplied by operators."],
+      ["Export, retention and deletion", "Confirm account closure, data export and deletion procedures with the team. The final policy must specify actual retention periods and any records that must be retained."],
+    ],
+  },
+  "/terms": {
+    label: "Terms", title: "Terms of Use",
+    description: "These Terms of Use apply to your access to and use of this website.",
+    approved: true,
+    lastUpdated: "3 July 2026",
+    sections: [
+      ["About these terms", 'This website is operated by Simplified Management ("Simplified Management", "we", "us"). These Terms of Use apply to your access to and use of this website. If you do not agree with them, please do not use the site.'],
+      ["Use of the site", "You may use this site for lawful purposes only. You agree not to use it in any way that could damage, disable, or impair the site, or interfere with anyone else's use of it, and not to attempt unauthorized access to any part of the site or its systems."],
+      ["Demo requests and submissions", "When you submit a demo request or contact form, you agree to provide accurate information and confirm you are authorized to share it. We use the details you submit to respond to you and arrange a demonstration, as described in our Privacy Policy. Submitting a request does not create any contract or obligation to purchase."],
+      ["Intellectual property", "The content on this site, including text, graphics, logos, and design, is owned by or licensed to Simplified Management and is protected by applicable laws. You may not copy, reproduce, or distribute it without our prior written permission, except as allowed for normal viewing of the site."],
+      ["Information and no warranty", 'The information on this site is provided for general information about our products and is offered on an "as is" basis. Product features, pricing references, and any savings estimates are illustrative and may change. To the fullest extent permitted by law, we make no warranties, express or implied, about the accuracy or completeness of the site\'s content.'],
+      ["Limitation of liability", "To the fullest extent permitted by law, Simplified Management will not be liable for any indirect, incidental, or consequential loss arising from your use of, or inability to use, this website."],
+      ["Third-party links", "This site may contain links to third-party websites. We are not responsible for the content or practices of those sites, and links do not imply our endorsement."],
+      ["Changes to these terms", "We may update these terms from time to time. When we do, we will revise the date at the top of this page. Your continued use of the site means you accept the updated terms."],
+      ["Governing law", "These terms are governed by the laws of India, and any disputes will be subject to the jurisdiction of the courts of Pune, Maharashtra."],
+      ["Contact us", "Simplified Management\nViman Nagar, Pune, Maharashtra, India\ninfo@simplifiedmanagement.in"],
+    ],
+  },
+  "/dpa": {
+    label: "Legal", title: "Data Processing Agreement",
+    metadataTitle: "Data Processing Agreement",
+    description: "This Data Processing Agreement (DPA) forms part of the agreement between Simplified Management and each customer using the Platform, and governs how we process personal data on their behalf.",
+    approved: true,
+    lastUpdated: "19 August 2026",
+    introduction: 'This DPA forms part of the agreement between Simplified Management Private Limited (CIN U62099PN2026PTC254686) ("Processor", "we") and the customer identified in the applicable order form or account signup ("Fiduciary", "you", "Customer") for use of the Simplified Management application (the "Platform"). It should be read alongside our App Privacy Policy and Terms of Use.',
+    sections: [
+      ["1. Roles", ['The Customer is the Data Fiduciary for all personal data of its guests and staff processed through the Platform, as defined under the Digital Personal Data Protection Act 2023 ("DPDP Act"). The Customer determines the purpose and means of processing that data. The Processor processes that data solely on the Customer\'s documented instructions, which are given by the Customer\'s use of the Platform\'s features and any written instruction the Customer separately provides.', "This DPA does not apply to personal data the Processor holds about the Customer's own account users (name, email, login records, billing data) — that relationship is governed by the Terms of Use, under which the Processor acts as Data Fiduciary directly."]],
+      ["2. Scope of processing", [], null, {
+        headers: ["", ""], caption: "Scope of processing",
+        rows: [
+          ["Subject matter", "Provision of the Platform: reservation management, housekeeping and staff task routing, laundry and inventory tracking, guest check-in and identity document handling, invoicing and GST documentation, and reporting"],
+          ["Duration", "The term of the Customer's subscription, plus the retention periods in §6"],
+          ["Nature of processing", "Storage, display, computation (occupancy/revenue reporting), transmission (sync with the Customer's PMS), deletion"],
+          ["Categories of data subjects", "The Customer's guests; the Customer's staff (housekeepers, supervisors, admins)"],
+          ["Categories of personal data", "See App Privacy Policy §4 — reservation data, guest identity documents, Form C / foreign-national records, invoice and payment data, staff assignment records"],
+        ],
+      }],
+      ["3. Processor obligations", "The Processor shall:", [
+        "Process personal data only on the Customer's documented instructions, including regarding cross-border transfer — noting that, per App Privacy Policy §7, all processing currently occurs on infrastructure located in India",
+        "Ensure personnel authorized to process the data are bound by confidentiality",
+        "Implement the security measures described in §7 below",
+        "Assist the Customer, at the Customer's reasonable request, in responding to data principal requests (access, correction, erasure) it receives regarding its guests or staff",
+        "Notify the Customer without undue delay after becoming aware of a personal data breach affecting the Customer's data (see §4)",
+        "Delete or return all personal data at the end of the relationship, per §6, unless retention is required by law",
+        "Make available to the Customer the information reasonably necessary to demonstrate compliance with this DPA",
+        "Not engage a sub-processor without the authorization in §5",
+      ]],
+      ["4. Breach notification", "The Processor will notify the Customer within 72 hours of becoming aware of a personal data breach affecting the Customer's data, including: the nature of the breach, categories and approximate number of data subjects and records affected, likely consequences, and measures taken or proposed. The Customer remains responsible for any notification obligations it has to the Data Protection Board of India or to affected individuals."],
+      ["5. Sub-processors", "The Customer authorizes the Processor to engage the following sub-processors, each bound by written terms no less protective than this DPA:", null, {
+        headers: ["Sub-processor", "Purpose"], caption: "Authorized sub-processors",
+        rows: [
+          ["Supabase", "Database, authentication, and file storage"],
+          ["MSG91", "WhatsApp messaging (booking confirmations, check-in links, guest communications)"],
+          ["The Customer's own PMS provider (eZee Technosys or iPMS247)", "Reservation data source"],
+          ["MakeMyTrip / Goibibo", "Booking and cancellation sync, where active"],
+        ],
+        after: "The Processor will notify the Customer of any intended change to this list at least 30 days in advance, giving the Customer the opportunity to object on reasonable data-protection grounds.",
+      }],
+      ["6. Retention and deletion", "The Processor will retain and delete Customer data in line with the schedule in App Privacy Policy §6. On termination of the Customer's subscription, the Processor will delete all Customer data within 90 days, except data it is required to retain by law (statutory GST/invoice records to 6 years; other categories per the same schedule)."],
+      ["7. Security measures", "The Processor maintains: role-based access control differentiating access levels within the Platform; encryption of data in transit; access logging; and restricted internal access on a need-to-know basis. Details available on request."],
+      ["8. Audit", "The Customer may request, no more than once per 12 months, evidence of the Processor's compliance with this DPA (e.g. a summary of security controls or a relevant certification). On-site audits, if required, will be scheduled by mutual agreement."],
+      ["9. Liability", "Governed by the limitation of liability terms in the Customer's Terms of Use, except where the DPDP Act or other applicable law prevents such limitation."],
+      ["10. Precedence", "In the event of conflict between this DPA and the Terms of Use on matters of personal data processing, this DPA controls."],
+      ["Contact us", "Simplified Management Private Limited\nViman Nagar, Pune, Maharashtra, India\nprivacy@simplifiedmanagement.in"],
+    ],
+  },
+};
+
+export const footerPageMetadata = {
+  ...Object.fromEntries(Object.entries(informationPages).map(([path, page]) => [path, [page.label, page.description]])),
+  ...Object.fromEntries(Object.entries(legalPages).map(([path, page]) => [path, [page.metadataTitle || page.label, page.description]])),
+  "/services/property-management-software": ["Property Management Software", "Manage properties, reservations, guests and team tasks in one connected view."],
+  "/services/channel-manager": ["Channel Manager", "Explore connected booking channels and a clearer availability workflow."],
+  "/services/calendar-sync": ["Calendar Sync", "Keep reservations and availability aligned through one master calendar."],
+  "/services/partner-payouts": ["Partner Payouts", "Follow booking income, expenses and each partner's share."],
+  "/roi-calculator": ["ROI Calculator", "Estimate monthly manual hours saved, operations cost savings and revenue protected across your portfolio."],
+  "/resources": ["Free Templates", "Download practical templates for property operations, channel checks and owner reporting."],
+  "/compare": ["Compare", "Compare Simplified Management with Hostaway, Guesty and Lodgify for property operations in India."],
+};
