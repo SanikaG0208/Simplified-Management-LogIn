@@ -61,11 +61,12 @@ function LoginPage() {
           <p className="panel-caption">A simpler way to manage your properties, every day.</p>
         </aside>
       </main>
-      <p className="legal-notice">By continuing, you agree to our <a href="https://www.simplifiedmanagement.in/terms" target="_blank" rel="noopener noreferrer"><strong>Terms of Service</strong></a> and <a href="https://www.simplifiedmanagement.in/privacy" target="_blank" rel="noopener noreferrer"><strong>Privacy Policy</strong></a>.</p>
+      <p className="legal-notice">By continuing, you agree to our <a href="https://www.simplifiedmanagement.in/terms" target="_blank" rel="noopener noreferrer"><strong>Terms of Service</strong></a> and <a href="http://127.0.0.1:4173/privacy" target="_blank" rel="noopener noreferrer"><strong>Privacy Policy</strong></a>.</p>
       <footer><span>© {new Date().getFullYear()} Simplified Management</span><span className="footer-right">Built for better property days.<span className="preview-tag">Design preview</span></span></footer>
     </div>
   );
 }
 
 createRoot(document.getElementById("root")).render(<React.StrictMode><LoginPage /></React.StrictMode>);
+
 
