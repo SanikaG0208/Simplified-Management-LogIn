@@ -1,3 +1,4 @@
+import { Button } from "antd";
 import Icon from "../ui/Icon";
 
 export default function AiAssistant() {
@@ -26,9 +27,9 @@ export default function AiAssistant() {
             Bring your everyday questions to the demo. We'll show you the
             assistant and explain the capabilities available in the platform.
           </p>
-          <a className="button ai-demo" href="/demo">
+          <Button type="primary" className="button ai-demo" href="/demo">
             See the AI Assistant in action
-          </a>
+          </Button>
           <a className="ai-product-link" href="#product-screenshots">
             Explore the actual product screens
           </a>

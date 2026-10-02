@@ -1,3 +1,4 @@
+import { Button } from "antd";
 import PageIntro from "../components/ui/PageIntro";
 import Contact from "../components/home/Contact";
 
@@ -15,9 +16,9 @@ export default function ContactPage() {
         }
         description="Questions about the platform, your channels or your portfolio? Start a conversation with the Simplified Management team."
       >
-        <a href="tel:+919824004043" className="button">
+        <Button type="primary" href="tel:+919824004043" className="button">
           Call +91 98240 04043
-        </a>
+        </Button>
         <a className="quiet-link" href="mailto:info@simplifiedmanagement.in">
           Email our team
         </a>

@@ -1,3 +1,4 @@
+import { Button } from "antd";
 import PageIntro from "../components/ui/PageIntro";
 import PageCta from "../components/ui/PageCta";
 import { channels } from "../data/channels";
@@ -16,9 +17,9 @@ export default function IntegrationsPage() {
         }
         description="Explore the channels listed by Simplified Management. Bring the places your guests book into a conversation about one connected availability calendar."
       >
-        <a href="/demo" className="button">
+        <Button type="primary" href="/demo" className="button">
           Discuss your channel setup
-        </a>
+        </Button>
       </PageIntro>
       <section className="container section integration-directory">
         <div className="section-intro">

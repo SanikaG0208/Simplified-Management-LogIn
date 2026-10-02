@@ -1,0 +1,28 @@
+/* Brand layout sits on top of Ant Design's component styling and reset. */
+#root .ant-btn.button {
+  height: auto;
+  white-space: normal;
+}
+#root .ant-card.content-card > .ant-card-body {
+  padding: 0;
+}
+#root .ant-card.content-card {
+  font-size: 16px;
+  line-height: 1.7;
+}
+#root .content-card > .ant-card-body > svg {
+  color: var(--blue);
+  margin-bottom: 18px;
+}
+#root .template-card > .ant-card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  height: 100%;
+}
+#root .ant-input {
+  border-radius: var(--radius-control);
+}
+@media (prefers-reduced-motion: reduce) {
+  .ant-wave { display: none; }
+}

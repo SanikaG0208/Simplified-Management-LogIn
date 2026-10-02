@@ -1,3 +1,4 @@
+import { Button } from "antd";
 import { photography } from "../../data/content";
 import Icon from "../ui/Icon";
 
@@ -21,9 +22,9 @@ export default function Hero() {
           organised, from one dashboard.
         </p>
         <div className="hero-actions">
-          <a href="/demo" className="button">
+          <Button type="primary" href="/demo" className="button">
             Let's book your demo
-          </a>
+          </Button>
           <a href="#platform" className="quiet-link">
             Explore the platform
           </a>

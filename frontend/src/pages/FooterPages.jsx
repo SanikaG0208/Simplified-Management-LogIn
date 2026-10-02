@@ -1,3 +1,4 @@
+import { Button, Card, Input } from "antd";
 import { useState } from "react";
 import PageIntro from "../components/ui/PageIntro";
 import PageCta from "../components/ui/PageCta";
@@ -25,7 +26,7 @@ export function ProductDetailPage({ path }) {
             <p className="eyebrow">{journey.label}</p>
             <h1>{journey.headline[0]}<br /><em>{journey.headline[1]}</em></h1>
             <p className="page-lead">{feature.description}</p>
-            <div className="compare-actions"><a href="/demo" className="button">Explore it in a demo</a><a href="#workflow" className="quiet-link">See how it connects</a></div>
+            <div className="compare-actions"><Button type="primary" href="/demo" className="button">Explore it in a demo</Button><a href="#workflow" className="quiet-link">See how it connects</a></div>
           </div>
           <div className="journey-illustration" aria-label={`${journey.label} workflow illustration`}>
             <div className="journey-central-icon"><Icon name={journey.icon} size={60} /></div>
@@ -38,11 +39,11 @@ export function ProductDetailPage({ path }) {
         <section className="section container">
           <div className="detail-benefits">
             {feature.points.map((point, index) => (
-              <article className="content-card" key={point}>
+              <Card className="content-card" key={point}>
                 <span className="eyebrow">0{index + 1}</span>
                 <h2>{point}</h2>
                 <Icon name={feature.icon} size={30} />
-              </article>
+              </Card>
             ))}
           </div>
         </section>
@@ -77,14 +78,14 @@ export function InformationPage({ path }) {
   return (
     <Page>
       <PageIntro label={page.label} title={page.title} description={page.description}>
-        <a href="/contact" className="button">Talk to our team</a>
+        <Button type="primary" href="/contact" className="button">Talk to our team</Button>
       </PageIntro>
       <SectionAtmosphere variant="peach">
         <section className="section container">
           <div className="content-heading"><h2>{page.heading}</h2><p>{page.introduction}</p></div>
           <div className="content-card-grid">
             {page.cards.map(([icon, title, description]) => (
-              <article className="content-card" key={title}><Icon name={icon} size={30} /><h3>{title}</h3><p>{description}</p></article>
+              <Card className="content-card" key={title}><Icon name={icon} size={30} /><h3>{title}</h3><p>{description}</p></Card>
             ))}
           </div>
           {page.note && <p className="content-note">{page.note}</p>}
@@ -145,7 +146,7 @@ export function RoiCalculatorPage() {
       <SectionAtmosphere><section className="section container calculator-layout">
         <form className="calculator-inputs" onSubmit={event => event.preventDefault()}>
           <p className="eyebrow">Your portfolio</p><h2>Enter your numbers</h2><p>Results update live as you type.</p>
-          {inputFields.map(([name, label]) => <label key={name} htmlFor={`roi-${name}`}>{label}<input id={`roi-${name}`} type="number" min="0" step="any" inputMode="numeric" value={values[name]} onChange={event => setValues(previous => ({ ...previous, [name]: event.target.value === "" ? "" : nonNegative(event.target.value) }))} /></label>)}
+          {inputFields.map(([name, label]) => <label key={name} htmlFor={`roi-${name}`}>{label}<Input id={`roi-${name}`} type="number" min="0" step="any" inputMode="numeric" value={values[name]} onChange={event => setValues(previous => ({ ...previous, [name]: event.target.value === "" ? "" : nonNegative(event.target.value) }))} /></label>)}
           <p className="content-note">Channels are shown for context. More channels usually means more manual sync work, which is captured in your weekly hours above.</p>
           <button type="button" className="quiet-link calculator-reset" onClick={() => setValues(initialInputs)}>Reset assumptions</button>
         </form>
@@ -157,7 +158,7 @@ export function RoiCalculatorPage() {
             <div><dt>Revenue protected / month<small>Avoided losses from double-bookings, based on a small share of monthly bookings at risk.</small></dt><dd>{money(Math.round(result.revenue))}</dd></div>
           </dl>
           <div className="roi-assumptions"><strong>Estimates only</strong><p>These figures are illustrative estimates based on general assumptions, not a quote or a guarantee of results. Actual savings depend on your listings, channels, rates, and how your team works.</p><p>Assumptions used: automation removes about 70% of manual hours, ops time valued at ₹250/hour, roughly 8 bookings per listing per month with about 1% at risk of a double-booking costing 2 nights.</p></div>
-          <a href="/demo" className="button">Request a demo</a>
+          <Button type="primary" href="/demo" className="button">Request a demo</Button>
         </div>
       </section></SectionAtmosphere>
     </Page>
@@ -181,7 +182,7 @@ function downloadTemplate(template) {
 }
 export function ResourcesPage() {
   return <Page><PageIntro label="Free Templates" title={<>A little structure. <em>A smoother day.</em></>} description="Simple worksheets for daily property operations. Download, adapt and use them with your team." />
-    <SectionAtmosphere variant="peach"><section className="section container"><div className="content-card-grid">{templates.map(template => <article className="content-card template-card" key={template.file}><Icon name={template.icon} size={32} /><p className="eyebrow">FREE CSV TEMPLATE</p><h2>{template.name}</h2><p>{template.description}</p><button className="button" onClick={() => downloadTemplate(template)}>Download template</button></article>)}</div><p className="content-note">Open these blank CSV worksheets in your preferred spreadsheet app. Fill in values and calculations to suit your workflow; these downloads do not include formulas.</p></section></SectionAtmosphere><PageCta title="Ready to connect the whole workflow?" /></Page>;
+    <SectionAtmosphere variant="peach"><section className="section container"><div className="content-card-grid">{templates.map(template => <Card className="content-card template-card" key={template.file}><Icon name={template.icon} size={32} /><p className="eyebrow">FREE CSV TEMPLATE</p><h2>{template.name}</h2><p>{template.description}</p><Button type="primary" className="button" onClick={() => downloadTemplate(template)}>Download template</Button></Card>)}</div><p className="content-note">Open these blank CSV worksheets in your preferred spreadsheet app. Fill in values and calculations to suit your workflow; these downloads do not include formulas.</p></section></SectionAtmosphere><PageCta title="Ready to connect the whole workflow?" /></Page>;
 }
 
 export function ComparePage() {
@@ -189,7 +190,7 @@ export function ComparePage() {
     <PageIntro label="Compare" title="Choosing a channel manager for India" description="If you are evaluating channel managers, it helps to compare the things that actually affect day-to-day operations. Here is how Simplified Management fits, and how it stacks up against tools operators often consider." />
     <SectionAtmosphere><section className="section container">
       <div className="content-heading"><p className="eyebrow">Side-by-side</p><h2>Compare Simplified Management</h2><p>We keep these comparisons fair and factual. Pick a tool below to see the capabilities operators tell us matter most.</p></div>
-      <div className="content-card-grid">{competitors.map(competitor => <article className="content-card" key={competitor.slug}><h3>vs {competitor.name}</h3><p>{competitor.description}</p><a className="quiet-link" href={`/compare/${competitor.slug}`}>Read comparison</a></article>)}</div>
+      <div className="content-card-grid">{competitors.map(competitor => <Card className="content-card" key={competitor.slug}><h3>vs {competitor.name}</h3><p>{competitor.description}</p><a className="quiet-link" href={`/compare/${competitor.slug}`}>Read comparison</a></Card>)}</div>
     </section></SectionAtmosphere>
     <section className="section container detail-next">
       <div><p className="eyebrow">Why operators choose us</p><h2>Built for how India operates</h2></div>
@@ -205,9 +206,10 @@ export function CompetitorComparisonPage({ path }) {
     <section className="section container">
       <div className="content-heading"><p className="eyebrow">A fair comparison</p><h2>What operators tell us matters</h2><p>{competitor.name} is an established tool used by property operators. Rather than make claims about its roadmap or pricing, we focus here on what Simplified Management offers, so you can line it up against your own evaluation of {competitor.name}.</p><p>If you are comparing {competitor.name} with Simplified Management, here is what operators tell us matters.</p></div>
       <h2>What Simplified Management offers</h2><p>Use these as a checklist when you evaluate {competitor.name} or any other platform.</p>
-      <div className="content-card-grid">{comparisonCapabilities.map(([icon, title, description]) => <article className="content-card" key={title}><Icon name={icon} size={30} /><h3>{title}</h3><p>{description}</p></article>)}</div>
+      <div className="content-card-grid">{comparisonCapabilities.map(([icon, title, description]) => <Card className="content-card" key={title}><Icon name={icon} size={30} /><h3>{title}</h3><p>{description}</p></Card>)}</div>
       <div className="policy-draft comparison-diligence"><h3>Do your own diligence</h3><p>Every portfolio is different. The best way to compare {competitor.name} and Simplified Management is to see both against your real properties, channels, and payout structure. Request a demo and we will map the platform to how your team actually works.</p></div>
     </section>
     <PageCta title="Start simplifying your operations" description="From 10 to 500+ listings, automate OTA distribution and partner payouts, and scale your property business." />
   </Page>;
 }
+

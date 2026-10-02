@@ -1,3 +1,4 @@
+import { Button } from "antd";
 import { plans, pricingTitle, pricingDescription, pricingNotes } from "../../data/pricing";
 import Icon from "../ui/Icon";
 
@@ -13,7 +14,7 @@ export default function Pricing({ showIntro = true }) {
               {plan.rates.map(rate => <div key={rate.label}><p>{rate.label}</p><strong>{rate.amount}</strong><span>{rate.unit}</span></div>)}
             </div>
             <ul>{plan.features.map(feature => <li key={feature}><Icon name="check" size={17} />{feature}</li>)}</ul>
-            <a className="button" href="/demo">Book a demo</a>
+            <Button type="primary" className="button" href="/demo">Book a demo</Button>
           </article>
         ))}
       </div>

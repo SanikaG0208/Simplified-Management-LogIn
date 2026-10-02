@@ -1,3 +1,4 @@
+import { Button } from "antd";
 import PageIntro from "../components/ui/PageIntro";
 import PageCta from "../components/ui/PageCta";
 import ProductGallery from "../components/home/ProductGallery";
@@ -20,9 +21,9 @@ export default function ProductPage() {
         }
         description="Reservations, calendars, guests, teams and owner accounts. A connected platform for the work behind every stay."
       >
-        <a className="button" href="/demo">
+        <Button type="primary" className="button" href="/demo">
           See the platform in action
-        </a>
+        </Button>
         <a className="quiet-link" href="#product-screenshots">
           Explore the real screens
         </a>

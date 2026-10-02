@@ -1,3 +1,4 @@
+import { Button } from "antd";
 import PageIntro from "../components/ui/PageIntro";
 import PageCta from "../components/ui/PageCta";
 import { photography } from "../data/content";
@@ -73,9 +74,9 @@ export default function SolutionsPage() {
         image={photography.interior}
         imageAlt="Bright furnished apartment with a comfortable living space"
       >
-        <a href="/demo" className="button">
+        <Button type="primary" href="/demo" className="button">
           Talk about your properties
-        </a>
+        </Button>
       </PageIntro>
       <div
         className="container segment-index"

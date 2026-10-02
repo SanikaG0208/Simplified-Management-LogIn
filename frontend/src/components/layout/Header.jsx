@@ -1,3 +1,4 @@
+import { Button } from "antd";
 import { useEffect, useRef, useState } from "react";
 import Brand from "../ui/Brand";
 import Icon from "../ui/Icon";
@@ -83,13 +84,13 @@ export default function Header({ path = "/" }) {
           >
             Login
           </a>
-          <a
+          <Button type="primary"
             className="button button--small"
             href="/demo"
             onClick={() => setOpen(false)}
           >
             Request Demo
-          </a>
+          </Button>
         </nav>
       </div>
     </header>

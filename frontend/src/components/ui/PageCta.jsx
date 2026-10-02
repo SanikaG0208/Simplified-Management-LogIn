@@ -1,3 +1,4 @@
+import { Button } from "antd";
 export default function PageCta({
   title = "Let's make your next day simpler.",
   description = "Bring your properties, your questions and your current workflow. We'll explore the platform together.",
@@ -10,9 +11,9 @@ export default function PageCta({
           <h2>{title}</h2>
           <p>{description}</p>
         </div>
-        <a className="button" href="/demo">
+        <Button type="primary" className="button" href="/demo">
           Request Demo
-        </a>
+        </Button>
       </div>
     </section>
   );

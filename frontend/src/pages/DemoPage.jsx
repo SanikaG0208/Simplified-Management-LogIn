@@ -1,3 +1,4 @@
+import { Button } from "antd";
 import PageIntro from "../components/ui/PageIntro";
 import Contact from "../components/home/Contact";
 
@@ -17,9 +18,9 @@ export default function DemoPage() {
         image="/images/dashboard.png"
         imageAlt="Actual Simplified Management dashboard with reservations, property totals and activity"
       >
-        <a className="button" href="#contact">
+        <Button type="primary" className="button" href="#contact">
           Request your walkthrough
-        </a>
+        </Button>
       </PageIntro>
       <section className="container section demo-agenda">
         <div>

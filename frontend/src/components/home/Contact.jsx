@@ -1,3 +1,4 @@
+import { Button, Input } from "antd";
 import { useState } from "react";
 
 export default function Contact({ mode = "demo" }) {
@@ -63,7 +64,7 @@ export default function Contact({ mode = "demo" }) {
           <div className="form-row">
             <label htmlFor="demo-name">
               Your name
-              <input
+              <Input
                 id="demo-name"
                 name="name"
                 autoComplete="name"
@@ -73,7 +74,7 @@ export default function Contact({ mode = "demo" }) {
             </label>
             <label htmlFor="demo-email">
               Work email
-              <input
+              <Input
                 id="demo-email"
                 name="email"
                 type="email"
@@ -86,7 +87,7 @@ export default function Contact({ mode = "demo" }) {
           <div className="form-row">
             <label htmlFor="demo-phone">
               Phone <span>(optional)</span>
-              <input
+              <Input
                 id="demo-phone"
                 name="phone"
                 type="tel"
@@ -129,7 +130,7 @@ export default function Contact({ mode = "demo" }) {
           </label>
           <label htmlFor="demo-message">
             Anything else? <span>(optional)</span>
-            <textarea
+            <Input.TextArea
               id="demo-message"
               name="message"
               rows="3"
@@ -137,9 +138,9 @@ export default function Contact({ mode = "demo" }) {
               placeholder="Tell us what you want to simplify."
             />
           </label>
-          <button className="button" type="submit">
+          <Button type="primary" className="button" htmlType="submit">
             {isContact ? "Prepare my enquiry" : "Prepare my demo enquiry"}
-          </button>
+          </Button>
           <small className="form-note">
             Opens an email draft for you to review and send.
           </small>
@@ -151,3 +152,4 @@ export default function Contact({ mode = "demo" }) {
     </section>
   );
 }
+

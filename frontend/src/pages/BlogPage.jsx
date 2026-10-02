@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Button } from "antd";
 import PageIntro from "../components/ui/PageIntro";
 import PageCta from "../components/ui/PageCta";
 import { articles } from "../data/articles";
@@ -19,13 +20,14 @@ export default function BlogPage() {
       <section className="container section blog-library">
         <div className="blog-filter" aria-label="Filter articles by category">
           {categories.map((c) => (
-            <button
+            <Button
               key={c}
+              type={c === category ? "primary" : "default"}
               aria-pressed={c === category}
               onClick={() => setCategory(c)}
             >
               {c}
-            </button>
+            </Button>
           ))}
         </div>
         <p className="article-count" aria-live="polite">

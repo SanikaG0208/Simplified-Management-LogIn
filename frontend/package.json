@@ -10,11 +10,12 @@
     "format": "prettier --write src"
   },
   "dependencies": {
+    "antd": "^6.6.5",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },
   "devDependencies": {
-    "vite": "^6.0.0",
-    "prettier": "^3.0.0"
+    "prettier": "^3.0.0",
+    "vite": "^6.0.0"
   }
 }

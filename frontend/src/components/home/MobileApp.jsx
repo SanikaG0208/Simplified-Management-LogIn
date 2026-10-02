@@ -1,3 +1,4 @@
+import { Button } from "antd";
 import Icon from "../ui/Icon";
 import { useState } from "react";
 
@@ -16,9 +17,9 @@ export default function MobileApp() {
           Keep your operation close with the Simplified Management app. Explore
           the mobile experience and the workflows available to your team.
         </p>
-        <a className="button" href="/demo">
+        <Button type="primary" className="button" href="/demo">
           Include the app in my demo
-        </a>
+        </Button>
         <div className="app-detail">
           <Icon name="phone" size={24} />
           <span>
