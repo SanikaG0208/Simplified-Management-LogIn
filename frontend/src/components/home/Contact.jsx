@@ -1,5 +1,5 @@
-import { Button, Input } from "antd";
-import { useState } from "react";
+import { Button, Input, Select } from "antd";
+import { useRef, useState } from "react";
 
 export default function Contact({ mode = "demo" }) {
   const isContact = mode === "contact";
@@ -10,8 +10,16 @@ export default function Contact({ mode = "demo" }) {
       ? `I'd like a walkthrough for ${params.get("interest")}.`
       : "";
   const [status, setStatus] = useState("");
+  const [portfolio, setPortfolio] = useState(undefined);
+  const [interest, setInterest] = useState("The full platform");
+  const portfolioRef = useRef(null);
   function handleSubmit(event) {
     event.preventDefault();
+    if (!portfolio) {
+      setStatus("Please select your portfolio size.");
+      portfolioRef.current?.focus();
+      return;
+    }
     const data = new FormData(event.currentTarget);
     const body = [
       "Hello Simplified Management,",
@@ -97,36 +105,31 @@ export default function Contact({ mode = "demo" }) {
             </label>
             <label htmlFor="demo-portfolio">
               Portfolio size
-              <select
+              <Select
+                ref={portfolioRef}
                 id="demo-portfolio"
-                name="portfolio"
-                required
-                defaultValue=""
-              >
-                <option value="" disabled>
-                  Select properties
-                </option>
-                <option>1–10 properties</option>
-                <option>11–50 properties</option>
-                <option>51–200 properties</option>
-                <option>200+ properties</option>
-              </select>
+                aria-required="true"
+                className="site-select"
+                classNames={{ popup: { root: "site-select-popup" } }}
+                placeholder="Select properties"
+                value={portfolio}
+                onChange={(value) => { setPortfolio(value); setStatus(""); }}
+                options={["1–10 properties", "11–50 properties", "51–200 properties", "200+ properties"].map(value => ({ value, label: value }))}
+              />
+              <input type="hidden" name="portfolio" value={portfolio || ""} />
             </label>
           </div>
           <label htmlFor="demo-interest">
             I'd like to explore
-            <select
+            <Select
               id="demo-interest"
-              name="interest"
-              defaultValue="The full platform"
-            >
-              <option>The full platform</option>
-              <option>Property management</option>
-              <option>Channel management</option>
-              <option>Partner accounts</option>
-              <option>The mobile app</option>
-              <option>The AI Assistant</option>
-            </select>
+              className="site-select"
+              classNames={{ popup: { root: "site-select-popup" } }}
+              value={interest}
+              onChange={setInterest}
+              options={["The full platform", "Property management", "Channel management", "Partner accounts", "The mobile app", "The AI Assistant"].map(value => ({ value, label: value }))}
+            />
+            <input type="hidden" name="interest" value={interest} />
           </label>
           <label htmlFor="demo-message">
             Anything else? <span>(optional)</span>
@@ -152,4 +155,5 @@ export default function Contact({ mode = "demo" }) {
     </section>
   );
 }
+
 

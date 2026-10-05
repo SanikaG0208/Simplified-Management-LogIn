@@ -870,7 +870,7 @@
   font-weight: 400;
   color: var(--muted);
 }
-.demo-form input,
+.demo-form input.ant-input,
 .demo-form select,
 .demo-form textarea {
   width: 100%;
@@ -887,7 +887,7 @@
 .demo-form textarea {
   resize: vertical;
 }
-.demo-form input::placeholder,
+.demo-form input.ant-input::placeholder,
 .demo-form textarea::placeholder {
   color: #8a96a5;
 }
@@ -1211,3 +1211,4 @@
     font-size: 38px;
   }
 }
+
